@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olimpia Games</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo-container">
+        <span>Olimpia Games</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="torneo.html" class="active">Torneo</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <section id="torneo">
+      <h2>Inscripción al Torneo</h2>
+      <p>
+        Participa en nuestros torneos y demuestra tu habilidad. Completa el
+        formulario para inscribirte.
+      </p>
+
+      <div class="registration-form">
+        <form id="inscripcionForm">
+          <div class="form-group">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required />
+            <div class="error" id="nombreError">
+              Por favor ingresa tu nombre completo
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+            <div class="error" id="emailError">
+              Por favor ingresa un correo válido
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input
+              type="date"
+              id="fechaNacimiento"
+              name="fechaNacimiento"
+              required
+            />
+            <div class="error" id="edadError">
+              Debes tener al menos 14 años para inscribirte
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="torneo">Selecciona el torneo:</label>
+            <select id="Torneo" name="torneo" required>
+              <option value="">-- Selecciona un torneo --</option>
+              <option value="fifa">Torneo FIFA 23 - $20</option>
+              <option value="valorant">Torneo Valorant - $30</option>
+              <option value="fortnite">Torneo Fortnite - $25</option>
+              <option value="cod">Torneo Call of Duty - $35</option>
+              <option value="lol">Torneo League of Legends - $30</option>
+            </select>
+            <div class="error" id="torneoError">
+              Por favor selecciona un torneo
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="montoPagado">Monto pagado ($):</label>
+            <input
+              type="number"
+              id="montoPagado"
+              name="montoPagado"
+              min="0"
+              step="0.01"
+              required
+            />
+            <div class="error" id="pagoError">
+              El monto debe ser igual o mayor al costo del torneo
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="comentarios">Comentarios adicionales:</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Inscribirse" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h3 id="modalTitle">Resultado de Inscripción</h3>
+        <p id="modalMessage"></p>
+        <div id="detallePago"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2023 Olimpia Games. Todos los derechos reservados.</p>
+      <p>Desarrollado por el equipo de Olimpia Games</p>
+    </footer>
+
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="SCRIPT/script.js"></script>
+    <script src="SCRIPT/game.js"></script>
+  </body>
+</html>

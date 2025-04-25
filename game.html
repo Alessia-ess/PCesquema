@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olimpia Games</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo-container">
+        <span>Olimpia Games</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="torneo.html" class="active">Torneo</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <section id="game">
+      <h2>Garbage Collector</h2>
+      <p>
+        Ayuda al estudiante a recolectar toda la basura en 60 segundos para
+        pasar al siguiente nivel.
+      </p>
+
+      <div class="game-container">
+        <div class="game-info">
+          <p>Tiempo: <span id="time">60</span>s</p>
+          <p>Basura recolectada: <span id="score">0</span>/10</p>
+          <p>Nivel: <span id="level">1</span></p>
+        </div>
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        <button id="startButton" class="game-button">Comenzar Juego</button>
+        <div id="message" class="game-message"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2023 Olimpia Games. Todos los derechos reservados.</p>
+      <p>Desarrollado por el equipo de Olimpia Games</p>
+    </footer>
+
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="SCRIPT/script.js"></script>
+    <script src="SCRIPT/game.js"></script>
+  </body>
+</html>
